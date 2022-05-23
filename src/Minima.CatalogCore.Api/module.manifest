@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <id>Minima.CatalogCore</id>
+    <version>1.0.0</version>
+    <version-tag />
+    <platformVersion>1.0.0</platformVersion>
+    <title>Commerce core module</title>
+    <description>Common e-commerce domain functionality</description>
+    <authors>
+        <author>Emre Karahan</author>
+    </authors>
+    <owners>
+        <owner>Minima</owner>
+    </owners>
+    <projectUrl>https://virtocommerce.com/apps/extensions/virto-core-module</projectUrl>
+    <iconUrl>Modules/$(VirtoCommerce.Core)/Content/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes />
+    <copyright>Copyright © 2011-2021 Virto Commerce. All rights reserved</copyright>
+    <tags>security core</tags>
+    <assemblyFile>Minima.CatalogCore.Api.dll</assemblyFile>
+    <moduleType>Minima.CatalogCore.Api.Module, Minima.CatalogCore.Api</moduleType>
+    <incompatibilities />
+    <groups>
+        <group>commerce</group>
+    </groups>
+    <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
+</module>
