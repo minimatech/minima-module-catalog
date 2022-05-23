@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\Build\Minima.Common.props" />
+    <PropertyGroup>
+        <Configurations>Release;Debug</Configurations>
+        <RootNamespace>Minima.CatalogModule.Domain</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="Minima.Platform.Infrastructure" Version="1.0.1" />
+    </ItemGroup>
+</Project>
