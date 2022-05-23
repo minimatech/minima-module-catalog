@@ -1,23 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <Import Project="..\Build\Minima.Common.props" />
     <PropertyGroup>
-        <Configurations>Release;Debug</Configurations>
-        <RootNamespace>Minima.CatalogModule.Api</RootNamespace>
+        <IsPackable>false</IsPackable>
     </PropertyGroup>
-<!--    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">-->
-<!--        <OutputPath>..\..\..\App\Minima.Platform.Api\modules\Module.Catalog</OutputPath>-->
-<!--        <OutDir>$(OutputPath)</OutDir>-->
-<!--    </PropertyGroup>-->
-
-<!--    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">-->
-<!--        <OutputPath>..\..\..\App\Minima.Platform.Api\modules\Module.Catalog</OutputPath>-->
-<!--        <OutDir>$(OutputPath)</OutDir>-->
-<!--    </PropertyGroup>-->
-
-<!--    <Target Name="PostBuild" AfterTargets="PostBuildEvent">-->
-<!--        <RemoveDir Directories="..\..\..\App\Minima.Platform.Api\modules\Module.Catalog\refs" />-->
-<!--        <RemoveDir Directories="..\..\..\App\Minima.Platform.Api\modules\Module.Catalog\ref" />-->
-<!--    </Target>-->
 
     <ItemGroup>
         <ProjectReference Include="..\Minima.CatalogModule.Business\Minima.CatalogModule.Business.csproj">
@@ -36,17 +21,6 @@
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
     </ItemGroup>
-
-    <!--    <ItemGroup>-->
-    <!--        <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="6.0.4" />-->
-    <!--    </ItemGroup>-->
-
-    <!--    <Target Name="CopyFile" AfterTargets="AfterBuild">-->
-    <!--        <ItemGroup>-->
-    <!--            <CopyFiles Include="$(NuGetPackageRoot)\microsoft.aspnetcore.authentication.facebook\6.0.4\lib\net6.0\*.dll" />-->
-    <!--        </ItemGroup>-->
-    <!--        <Copy SourceFiles="@(CopyFiles)" DestinationFolder="..\..\Web\Grand.Web\Plugins\Authentication.Facebook\" />-->
-    <!--    </Target>-->
 
     <ItemGroup>
         <Folder Include="Commands" />
