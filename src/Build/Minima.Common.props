@@ -9,11 +9,11 @@
 		<Company>UNIT-SOFT Sp. z o.o.</Company>
 		<Authors>UNIT-SOFT Sp. z o.o.</Authors>
 		<Product>grandnode</Product>
-		<PackageProjectUrl>https://grandnode.com/</PackageProjectUrl>   
-		<RepositoryUrl>https://github.com/MinimaDigital/minima-graphql</RepositoryUrl>
+		<PackageProjectUrl>https://grandnode.com/</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/minimatech/minima-platform</RepositoryUrl>
 		<RepositoryType>Git</RepositoryType>
 	</PropertyGroup>
-	
+
 	<ItemGroup>
 		<Using Include="System"/>
 		<Using Include="System.Collections.Generic"/>

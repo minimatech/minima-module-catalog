@@ -12,11 +12,11 @@ namespace Minima.CatalogModule.Api.GraphQL.Category.Fields.Query;
 public class GetAllCategoriesQuery : IQueryFieldMarker
 {
     private readonly ISchemaFactory _schemaFactory;
-    
+
     public GetAllCategoriesQuery(ISchemaFactory schemaFactory)
     {
         _schemaFactory = schemaFactory;
-        
+
     }
     public async Task BuildQueryFields()
     {
@@ -40,11 +40,12 @@ public class GetAllCategoriesQuery : IQueryFieldMarker
         };
         schema.Query.AddField(getAllCategoriesFieldType);
     }
+
     private async Task<IPagedList<CatalogModule.Domain.Catalog.Category>> ResolveAsync(
         IResolveFieldContext resolveContext)
     {
         var categoryService = resolveContext?.RequestServices?.GetService<ICategoryService>();
-        
+
         var parentId = resolveContext?.GetArgument<string>("parentId");
         var pageIndex = resolveContext?.GetArgument<int>("pageIndex");
         var pageSize = resolveContext?.GetArgument<int>("pageSize");
@@ -60,5 +61,5 @@ public class GetAllCategoriesQuery : IQueryFieldMarker
         )!;
         return categories;
     }
-    
+
 }

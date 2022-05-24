@@ -185,7 +185,7 @@
         },
         "Module": {
           "type": "array",
-          "description": "Install params (install -module Minima.Core:1.2.3)",
+          "description": "Install params (install -module Minima.Platform.Infrastructure:1.2.3)",
           "items": {
             "type": "string"
           }
@@ -359,7 +359,7 @@
         },
         "SonarOrg": {
           "type": "string",
-          "description": "Sonar Organization (\"minima-commerce\" by default)"
+          "description": "Sonar Organization (\"minima-tech\" by default)"
         },
         "SonarPRBase": {
           "type": "string",

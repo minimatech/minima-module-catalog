@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <id>Minima.CatalogCore</id>
+    <id>Minima.CatalogModule</id>
     <version>1.0.0</version>
     <version-tag />
     <platformVersion>1.0.0</platformVersion>
@@ -18,8 +18,8 @@
     <releaseNotes />
     <copyright>Copyright © 2011-2021 Virto Commerce. All rights reserved</copyright>
     <tags>security core</tags>
-    <assemblyFile>Minima.CatalogCore.Api.dll</assemblyFile>
-    <moduleType>Minima.CatalogCore.Api.Module, Minima.CatalogCore.Api</moduleType>
+    <assemblyFile>Minima.CatalogModule.Api.dll</assemblyFile>
+    <moduleType>Minima.CatalogModule.Api.Module, Minima.CatalogModule.Api</moduleType>
     <incompatibilities />
     <groups>
         <group>commerce</group>
