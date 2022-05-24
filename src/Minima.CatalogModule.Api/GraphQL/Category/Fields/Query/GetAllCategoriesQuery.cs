@@ -25,7 +25,7 @@ public class GetAllCategoriesQuery : IQueryFieldMarker
         {
             Name = "getAllCategories",
             Type = typeof(ListGraphType<CategoryType>),
-            Resolver = new LockedAsyncFieldResolver<IPagedList<Domain.Catalog.Category>>(ResolveAsync),
+            Resolver = new LockedAsyncFieldResolver<IPagedList<Domain.Domain.Catalog.Category>>(ResolveAsync),
             Arguments = new QueryArguments(
                 new QueryArgument<IntGraphType> {Name = "pageIndex", Description = "Page Index", DefaultValue = 0},
                 new QueryArgument<IntGraphType>
@@ -41,7 +41,7 @@ public class GetAllCategoriesQuery : IQueryFieldMarker
         schema.Query.AddField(getAllCategoriesFieldType);
     }
 
-    private async Task<IPagedList<CatalogModule.Domain.Catalog.Category>> ResolveAsync(
+    private async Task<IPagedList<Domain.Domain.Catalog.Category>> ResolveAsync(
         IResolveFieldContext resolveContext)
     {
         var categoryService = resolveContext?.RequestServices?.GetService<ICategoryService>();

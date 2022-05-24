@@ -1,5 +1,5 @@
 using MediatR;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure;
 using Minima.Infrastructure.Caching;
 using Minima.Infrastructure.Caching.Constants;
@@ -144,7 +144,7 @@ public partial class CategoryService : ICategoryService
     public virtual async Task<IList<Category>> GetAllCategoriesByParentCategoryId(string parentCategoryId = "",
         bool showHidden = false, bool includeAllLevels = false)
     {
-        
+
         string key = string.Format(CacheKey.CATEGORIES_BY_PARENT_CATEGORY_ID_KEY, parentCategoryId, showHidden, includeAllLevels);
         return await _cacheBase.GetAsync(key, async () =>
         {
@@ -159,14 +159,14 @@ public partial class CategoryService : ICategoryService
                     //Limited to customer groups rules
                     //var allowedCustomerGroupsIds = _workContext.CurrentCustomer.GetCustomerGroupIds();
                     query = from p in query
-                        where !p.LimitedToGroups 
+                        where !p.LimitedToGroups
                         select p;
                 }
                 if (!CommonHelper.IgnoreStoreLimitations)
                 {
                     //Limited to stores rules
                     query = from p in query
-                        where !p.LimitedToStores 
+                        where !p.LimitedToStores
                         select p;
                 }
 
@@ -247,7 +247,7 @@ public partial class CategoryService : ICategoryService
     }
 
     /// <summary>
-    /// Get category breadcrumb 
+    /// Get category breadcrumb
     /// </summary>
     /// <param name="category">Category</param>
     /// <param name="categoryService">Category service</param>
@@ -262,7 +262,7 @@ public partial class CategoryService : ICategoryService
         //used to avoid circular references
         var alreadyProcessedCategoryIds = new List<string>();
 
-        while (category != null && //not null                
+        while (category != null && //not null
                (showHidden || category.Published) && //published
                //(showHidden || _aclService.Authorize(category, _workContext.CurrentCustomer)) && //limited to customer groups
                //(showHidden || _aclService.Authorize(category, _workContext.CurrentStore.Id)) && //limited to store
@@ -279,7 +279,7 @@ public partial class CategoryService : ICategoryService
     }
 
     /// <summary>
-    /// Get category breadcrumb 
+    /// Get category breadcrumb
     /// </summary>
     /// <param name="category">Category</param>
     /// <param name="allCategories">All categories</param>
@@ -292,7 +292,7 @@ public partial class CategoryService : ICategoryService
         //used to avoid circular references
         var alreadyProcessedCategoryIds = new List<string>();
 
-        while (category != null && //not null                
+        while (category != null && //not null
                (showHidden || category.Published) && //published
                //(showHidden || _aclService.Authorize(category, _workContext.CurrentCustomer)) && //limited to customer groups
                //(showHidden || _aclService.Authorize(category, _workContext.CurrentStore.Id)) && //limited to store
@@ -311,7 +311,7 @@ public partial class CategoryService : ICategoryService
     }
 
     /// <summary>
-    /// Get formatted category breadcrumb 
+    /// Get formatted category breadcrumb
     /// Note: ACL and store acl are ignored
     /// </summary>
     /// <param name="category">Category</param>
@@ -334,7 +334,7 @@ public partial class CategoryService : ICategoryService
         return result;
     }
     /// <summary>
-    /// Get formatted category breadcrumb 
+    /// Get formatted category breadcrumb
     /// Note: ACL and store acl are ignored
     /// </summary>
     /// <param name="category">Category</param>

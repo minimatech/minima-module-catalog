@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure;
 using Minima.Infrastructure.Domain.Customers;
 

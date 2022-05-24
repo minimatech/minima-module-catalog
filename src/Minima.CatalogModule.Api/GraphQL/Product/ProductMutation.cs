@@ -21,10 +21,10 @@ public class ProductMutation : ISchemaBuilder
                 ),
                 //Description = "Site layers define the rules and zone placement for widgets.",
                 Type = typeof(ProductType),
-                Resolver =  new LockedAsyncFieldResolver<CatalogModule.Domain.Catalog.Product>(ResolveAsync)
+                Resolver =  new LockedAsyncFieldResolver<Domain.Domain.Catalog.Product>(ResolveAsync)
             };
             schema.Mutation?.AddField(field);
-            
+
         }
         catch (Exception e)
         {
@@ -34,10 +34,10 @@ public class ProductMutation : ISchemaBuilder
         return Task.CompletedTask;
     }
 
-    private async Task<CatalogModule.Domain.Catalog.Product> ResolveAsync(IResolveFieldContext resolveContext)
+    private async Task<Domain.Domain.Catalog.Product> ResolveAsync(IResolveFieldContext resolveContext)
     {
         var layerService = resolveContext?.RequestServices?.GetService<IProductService>();
-        var product = resolveContext.GetArgument<CatalogModule.Domain.Catalog.Product>("product");
+        var product = resolveContext.GetArgument<Domain.Domain.Catalog.Product>("product");
         await  layerService.InsertProduct(product);
         return product;
     }

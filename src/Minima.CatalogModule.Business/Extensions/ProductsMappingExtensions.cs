@@ -1,5 +1,5 @@
 using Minima.CatalogCore.Business.Models.Catalog;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure.Mapper;
 using Minima.Services.Interfaces.Common.Directory;
 

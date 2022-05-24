@@ -1,4 +1,4 @@
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 
 namespace Minima.CatalogCore.Business.Services.Products;
 
@@ -7,7 +7,7 @@ namespace Minima.CatalogCore.Business.Services.Products;
 /// </summary>
 public partial interface IProductLayoutService
 {
-       
+
     /// <summary>
     /// Gets all product layout
     /// </summary>

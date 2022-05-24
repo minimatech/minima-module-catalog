@@ -1,4 +1,4 @@
-﻿using Minima.CatalogModule.Domain.Catalog;
+﻿using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Domain;
 using Minima.Infrastructure;
 
@@ -9,7 +9,7 @@ namespace Minima.CatalogCore.Business.Services.Products;
 /// </summary>
 public partial interface IProductReservationService
 {
-        
+
     /// <summary>
     /// Adds product reservation
     /// </summary>
@@ -56,7 +56,7 @@ public partial interface IProductReservationService
     Task DeleteCustomerReservationsHelper(CustomerReservationsHelper crh);
 
     /// <summary>
-    /// Cancel reservations by orderId 
+    /// Cancel reservations by orderId
     /// </summary>
     /// <param name="orderId"></param>
     Task CancelReservationsByOrderId(string orderId);

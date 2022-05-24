@@ -26,7 +26,7 @@ public class GetAllCategoriesByParentCategoryId : IQueryFieldMarker
         {
             Name = "getAllCategoriesByParentCategoryId",
             Type = typeof(ListGraphType<CategoryType>),
-            Resolver = new LockedAsyncFieldResolver<IList<CatalogModule.Domain.Catalog.Category>>(
+            Resolver = new LockedAsyncFieldResolver<IList<Domain.Domain.Catalog.Category>>(
                 GetAllCategoriesByParentCategoryIdResolveAsync),
             Arguments = new QueryArguments(
                 new QueryArgument<StringGraphType>
@@ -40,7 +40,7 @@ public class GetAllCategoriesByParentCategoryId : IQueryFieldMarker
         schema.Query.AddField(getAllCategoriesByParentCategoryId);
     }
 
-    private async Task<IList<Domain.Catalog.Category>> GetAllCategoriesByParentCategoryIdResolveAsync(IResolveFieldContext resolveContext)
+    private async Task<IList<Domain.Domain.Catalog.Category>> GetAllCategoriesByParentCategoryIdResolveAsync(IResolveFieldContext resolveContext)
     {
         var categoryService = resolveContext?.RequestServices?.GetService<ICategoryService>();
 

@@ -1,4 +1,4 @@
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Domain;
 using Minima.Infrastructure;
 
@@ -26,7 +26,7 @@ public partial interface IProductAttributeService
     Task<IPagedList<ProductAttribute>> GetAllProductAttributes(int pageIndex = 0, int pageSize = int.MaxValue);
 
     /// <summary>
-    /// Gets a product attribute 
+    /// Gets a product attribute
     /// </summary>
     /// <param name="productAttributeId">Product attribute identifier</param>
     /// <returns>Product attribute </returns>
@@ -48,7 +48,7 @@ public partial interface IProductAttributeService
 
     #region Product attributes mappings
 
-        
+
     /// <summary>
     /// Inserts a product attribute mapping
     /// </summary>

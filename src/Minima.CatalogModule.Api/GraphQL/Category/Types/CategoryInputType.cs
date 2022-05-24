@@ -2,7 +2,7 @@ using GraphQL.Types;
 
 namespace Minima.CatalogModule.Api.GraphQL.Category.Types;
 
-public sealed class CategoryInputType : InputObjectGraphType<CatalogModule.Domain.Catalog.Category>
+public sealed class CategoryInputType : InputObjectGraphType<Domain.Domain.Catalog.Category>
 {
     public CategoryInputType()
     {

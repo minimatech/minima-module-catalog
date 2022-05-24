@@ -1,7 +1,7 @@
 using MediatR;
 using Minima.CatalogCore.Business.Events.Catalog;
 using Minima.CatalogCore.Business.Queries.Catalog;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure;
 using Minima.Infrastructure.Caching;
 using Minima.Infrastructure.Caching.Constants;
@@ -301,7 +301,7 @@ public partial class ProductService : IProductService
             //await _mediator.Publish(new UpdateProductOnCartEvent(product));
         }
 
-        //raise event 
+        //raise event
         if (!oldProduct.Published && product.Published)
             await _mediator.Publish(new ProductPublishEvent(product));
 
@@ -590,7 +590,7 @@ public partial class ProductService : IProductService
             return null;
 
         sku = sku.Trim();
-        return await Task.FromResult(_productRepository.Table.Where(x => x.Sku == sku).FirstOrDefault());            
+        return await Task.FromResult(_productRepository.Table.Where(x => x.Sku == sku).FirstOrDefault());
     }
 
     public virtual async Task UpdateAssociatedProduct(Product product)
@@ -903,7 +903,7 @@ public partial class ProductService : IProductService
 
         //cache
         await _cacheBase.RemoveByPrefix(string.Format(CacheKey.PRODUCTS_BY_ID_KEY, productId));
-            
+
     }
 
     /// <summary>
@@ -1045,7 +1045,7 @@ public partial class ProductService : IProductService
 
     #endregion
 
-    #region Product pictures       
+    #region Product pictures
     /// <summary>
     /// Inserts a product picture
     /// </summary>
@@ -1103,7 +1103,7 @@ public partial class ProductService : IProductService
     }
     #endregion
 
-    #region Product warehouse inventory        
+    #region Product warehouse inventory
     /// <summary>
     /// Insert product warehouse inwentory
     /// </summary>

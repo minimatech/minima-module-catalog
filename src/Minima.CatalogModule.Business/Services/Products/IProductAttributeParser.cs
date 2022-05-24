@@ -1,4 +1,4 @@
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Domain.Common;
 using Minima.Infrastructure.Common;
 
@@ -69,7 +69,7 @@ public partial interface IProductAttributeParser
     bool? IsConditionMet(Product product, ProductAttributeMapping pam, IList<CustomAttribute> selectedAttributes);
 
     /// <summary>
-    /// Finds a product attribute combination by attributes stored in XML 
+    /// Finds a product attribute combination by attributes stored in XML
     /// </summary>
     /// <param name="product">Product</param>
     /// <param name="attributes">Attributes</param>

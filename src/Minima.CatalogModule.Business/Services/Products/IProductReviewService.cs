@@ -1,4 +1,4 @@
-﻿using Minima.CatalogModule.Domain.Catalog;
+﻿using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure;
 
 namespace Minima.CatalogCore.Business.Services.Products;
@@ -9,13 +9,13 @@ namespace Minima.CatalogCore.Business.Services.Products;
 public partial interface IProductReviewService
 {
     /// <summary>
-    /// Insert product review 
+    /// Insert product review
     /// </summary>
     /// <param name="productreview">Product review</param>
     Task InsertProductReview(ProductReview productreview);
 
     /// <summary>
-    /// Update product review 
+    /// Update product review
     /// </summary>
     /// <param name="productreview">Product review</param>
     Task UpdateProductReview(ProductReview productreview);
@@ -30,7 +30,7 @@ public partial interface IProductReviewService
     /// Gets all product reviews
     /// </summary>
     /// <param name="customerId">Customer identifier; "" to load all records</param>
-    /// <param name="approved">A value indicating whether to content is approved; null to load all records</param> 
+    /// <param name="approved">A value indicating whether to content is approved; null to load all records</param>
     /// <param name="fromUtc">Item creation from; null to load all records</param>
     /// <param name="toUtc">Item item creation to; null to load all records</param>
     /// <param name="message">Search title or review text; null to load all records</param>
@@ -48,5 +48,5 @@ public partial interface IProductReviewService
     /// <returns>Product review</returns>
     Task<ProductReview> GetProductReviewById(string productReviewId);
 
-        
+
 }

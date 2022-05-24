@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure;
 using Minima.Infrastructure.Caching;
 using Minima.Infrastructure.Caching.Constants;
@@ -54,7 +54,7 @@ public class ProductCategoryService : IProductCategoryService
                     //Limited to customer groups
                     //var allowedCustomerGroupsIds = _workContext.CurrentCustomer.GetCustomerGroupIds();
                     query = from p in query
-                        where !p.LimitedToGroups 
+                        where !p.LimitedToGroups
                         select p;
                 }
                 if (!CommonHelper.IgnoreStoreLimitations)

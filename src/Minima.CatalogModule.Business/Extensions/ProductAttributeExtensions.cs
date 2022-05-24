@@ -1,4 +1,4 @@
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 
 namespace Minima.CatalogCore.Business.Extensions;
 
@@ -45,9 +45,9 @@ public static class ProductAttributeExtensions
 
         return true;
     }
-       
+
     public static bool IsNonCombinable(this ProductAttributeMapping productAttributeMapping)
-    {           
+    {
         if (productAttributeMapping == null)
             return false;
 

@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure.Caching;
 using Minima.Infrastructure.Caching.Constants;
 using Minima.Infrastructure.Events;
@@ -23,7 +23,7 @@ public class CategoryDeletedEventHandler : INotificationHandler<EntityDeleted<Ca
 
     public async Task Handle(EntityDeleted<Category> notification, CancellationToken cancellationToken)
     {
-            
+
         //delete on the product
         await _productRepository.PullFilter(string.Empty, x => x.ProductCategories, z => z.CategoryId, notification.Entity.Id);
 

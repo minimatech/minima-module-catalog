@@ -1,5 +1,5 @@
 using MediatR;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure;
 using Minima.Infrastructure.Caching;
 using Minima.Infrastructure.Caching.Constants;
@@ -68,7 +68,7 @@ public partial class ProductAttributeService : IProductAttributeService
     }
 
     /// <summary>
-    /// Gets a product attribute 
+    /// Gets a product attribute
     /// </summary>
     /// <param name="productAttributeId">Product attribute identifier</param>
     /// <returns>Product attribute </returns>

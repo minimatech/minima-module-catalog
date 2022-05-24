@@ -1,10 +1,10 @@
 ﻿using MediatR;
 using Minima.CatalogCore.Business.Services.Products;
-using Minima.CatalogModule.Domain.Catalog;
 using Minima.Infrastructure.Domain.Customers;
 using Minima.Infrastructure.Events;
 using Minima.Platform.Data;
 using System.Text.Json;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 
 namespace Minima.CatalogCore.Business.Events.Handlers;
 
@@ -55,7 +55,7 @@ public class ProductDeletedEventHandler : INotificationHandler<EntityDeleted<Pro
 
         //delete customer group product
         await _customerGroupProductRepository.DeleteManyAsync(x => x.ProductId == notification.Entity.Id);
-            
+
         //delete product tags
         var existingProductTags = _productTagRepository.Table.Where(x => notification.Entity.ProductTags.ToList().Contains(x.Name)).ToList();
         foreach (var tag in existingProductTags)

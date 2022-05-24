@@ -20,10 +20,10 @@ public class ProductsQuery : ISchemaBuilder
                 Name = "Product",
                 Description = "Site layers define the rules and zone placement for widgets.",
                 Type = typeof(ListGraphType<ProductQueryObjectType>),
-                Resolver =  new LockedAsyncFieldResolver<(IPagedList<CatalogModule.Domain.Catalog.Product> products, IList<string>)>(ResolveAsync)
+                Resolver =  new LockedAsyncFieldResolver<(IPagedList<Domain.Domain.Catalog.Product> products, IList<string>)>(ResolveAsync)
             };
             schema.Query.AddField(field);
-            
+
         }
         catch (Exception e)
         {
@@ -35,8 +35,8 @@ public class ProductsQuery : ISchemaBuilder
 
         return Task.CompletedTask;
     }
-    
-    private  async Task<(IPagedList<Domain.Catalog.Product> products, IList<string>)> ResolveAsync(IResolveFieldContext resolveContext)
+
+    private  async Task<(IPagedList<Domain.Domain.Catalog.Product> products, IList<string>)> ResolveAsync(IResolveFieldContext resolveContext)
     {
         try
         {

@@ -1,4 +1,4 @@
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 
 namespace Minima.CatalogCore.Business.Services.Products;
 

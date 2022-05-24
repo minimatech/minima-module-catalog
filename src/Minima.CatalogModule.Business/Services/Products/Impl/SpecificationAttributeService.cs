@@ -1,5 +1,5 @@
 using MediatR;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure;
 using Minima.Infrastructure.Caching;
 using Minima.Infrastructure.Caching.Constants;
@@ -68,7 +68,7 @@ public partial class SpecificationAttributeService : ISpecificationAttributeServ
         sename = sename.ToLowerInvariant();
 
         var key = string.Format(CacheKey.SPECIFICATION_BY_SENAME, sename);
-        return await _cacheBase.GetAsync(key, async () => 
+        return await _cacheBase.GetAsync(key, async () =>
             await Task.FromResult(_specificationAttributeRepository.Table.Where(x => x.SeName == sename)
                 .FirstOrDefault()));
     }
@@ -88,7 +88,7 @@ public partial class SpecificationAttributeService : ISpecificationAttributeServ
         return await PagedList<SpecificationAttribute>.Create(query, pageIndex, pageSize);
     }
 
-        
+
     /// <summary>
     /// Inserts a specification attribute
     /// </summary>
@@ -203,7 +203,7 @@ public partial class SpecificationAttributeService : ISpecificationAttributeServ
 
     #region Product specification attribute
 
-        
+
     /// <summary>
     /// Inserts a product specification attribute mapping
     /// </summary>

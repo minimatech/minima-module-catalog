@@ -1,4 +1,4 @@
-﻿using Minima.CatalogModule.Domain.Catalog;
+﻿using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Domain;
 using Minima.Infrastructure;
 
@@ -25,7 +25,7 @@ public interface IProductCategoryService
     Task InsertProductCategory(ProductCategory productCategory, string productId);
 
     /// <summary>
-    /// Updates a mapping for product category 
+    /// Updates a mapping for product category
     /// </summary>
     /// <param name="productCategory">>Product category mapping</param>
     /// <param name="productId">Product id</param>

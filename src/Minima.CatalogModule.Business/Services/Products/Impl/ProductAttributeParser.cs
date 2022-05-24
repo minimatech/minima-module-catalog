@@ -1,5 +1,5 @@
 using Minima.CatalogCore.Business.Extensions;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure.Common;
 using Minima.Shared.Extensions;
 
@@ -163,7 +163,7 @@ public partial class ProductAttributeParser : IProductAttributeParser
                             bool hasValue = false;
                             foreach (string str2 in values2Str)
                             {
-                                //case insensitive? 
+                                //case insensitive?
                                 if (str1.Trim() == str2.Trim())
                                 {
                                     hasValue = true;
@@ -243,7 +243,7 @@ public partial class ProductAttributeParser : IProductAttributeParser
     }
 
     /// <summary>
-    /// Finds a product attribute combination by attributes stored 
+    /// Finds a product attribute combination by attributes stored
     /// </summary>
     /// <param name="product">Product</param>
     /// <param name="attributes">Attributes</param>

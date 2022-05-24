@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Minima.CatalogCore.Business.Queries.Catalog;
 using Minima.CatalogCore.Business.Services.Products;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure;
 using Minima.Infrastructure.Domain.Customers;
 using Minima.Platform.Data;
@@ -113,7 +113,7 @@ public class GetSearchProductsQueryHandler : IRequestHandler<GetSearchProductsQu
         {
             query = query.Where(p => p.ShowOnHomePage == request.ShowOnHomePage.Value);
         }
-        //The function 'CurrentUtcDateTime' is not supported by SQL Server Compact. 
+        //The function 'CurrentUtcDateTime' is not supported by SQL Server Compact.
         //That's why we pass the date value
         var nowUtc = DateTime.UtcNow;
         if (request.PriceMin.HasValue)

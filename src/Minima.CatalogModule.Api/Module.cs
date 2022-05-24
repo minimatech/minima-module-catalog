@@ -6,7 +6,7 @@ using Minima.CatalogCore.Business.Services.Products;
 using Minima.CatalogCore.Business.Services.Products.Impl;
 using Minima.CatalogModule.Api.GraphQL.Category;
 using Minima.CatalogModule.Api.GraphQL.Product;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.GraphQL.Abstractions;
 using Minima.Infrastructure.Modularity;
 
@@ -17,7 +17,7 @@ public class Module : IModule
 {
     private IApplicationBuilder _applicationBuilder;
 
-    
+
 
     public ManifestModuleInfo ModuleInfo { get; set; }
 
@@ -27,13 +27,13 @@ public class Module : IModule
         RegisterCatalogService(serviceCollection);
         RegisterDiscountsService(serviceCollection);
         RegisterTaxService(serviceCollection);
-        
+
         // serviceCollection.AddSingleton<ISchemaBuilder, CategoryMutation>();
         // serviceCollection.AddSingleton<ISchemaBuilder, CategoryQuery>();
-        
+
         // serviceCollection.AddSingleton<ISchemaBuilder, ProductsQuery>();
         // serviceCollection.AddSingleton<ISchemaBuilder, ProductMutation>();
-        
+
         serviceCollection.AddInputObjectGraphType<Product, ProductInputObjectType>();
         serviceCollection.AddObjectGraphType<Product, ProductQueryObjectType>();
         //services.AddObjectGraphType<ListPart, ListQueryObjectType>();
@@ -41,14 +41,14 @@ public class Module : IModule
 
     public void PostInitialize(IApplicationBuilder appBuilder)
     {
-     
+
     }
 
     public void Uninstall()
     {
-     
+
     }
-    
+
         private void RegisterCatalogService(IServiceCollection serviceCollection)
     {
         // serviceCollection.AddScoped<IOutOfStockSubscriptionService, OutOfStockSubscriptionService>();

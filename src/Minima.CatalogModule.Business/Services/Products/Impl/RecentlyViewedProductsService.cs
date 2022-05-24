@@ -1,4 +1,4 @@
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure.Caching;
 using Minima.Infrastructure.Caching.Constants;
 using Minima.Platform.Data;

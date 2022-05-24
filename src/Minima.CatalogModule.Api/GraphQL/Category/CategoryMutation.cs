@@ -23,16 +23,16 @@ public class CategoryMutation : ISchemaBuilder, IGraphQLMutationMarker
             ),
             Description = "Site Category Mutations",
             Type = typeof(CategoryType),
-            Resolver = new LockedAsyncFieldResolver<CatalogModule.Domain.Catalog.Category>(ResolveAsync)
+            Resolver = new LockedAsyncFieldResolver<Domain.Domain.Catalog.Category>(ResolveAsync)
         };
         schema.Mutation?.AddField(field);
         return Task.CompletedTask;
     }
 
-    private async Task<CatalogModule.Domain.Catalog.Category> ResolveAsync(IResolveFieldContext resolveContext)
+    private async Task<Domain.Domain.Catalog.Category> ResolveAsync(IResolveFieldContext resolveContext)
     {
         var categoryService = resolveContext?.RequestServices?.GetService<ICategoryService>();
-        var category = resolveContext?.GetArgument<CatalogModule.Domain.Catalog.Category>("category");
+        var category = resolveContext?.GetArgument<Domain.Domain.Catalog.Category>("category");
         await categoryService!.InsertCategory(category);
         return category;
     }

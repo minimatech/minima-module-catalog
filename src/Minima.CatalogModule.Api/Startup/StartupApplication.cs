@@ -8,7 +8,6 @@ using Minima.CatalogCore.Business.Services.Products;
 using Minima.CatalogCore.Business.Services.Products.Impl;
 using Minima.CatalogModule.Api.GraphQL.Category;
 using Minima.CatalogModule.Api.GraphQL.Product;
-using Minima.CatalogModule.Domain.Catalog;
 using Minima.GraphQL.Abstractions;
 using Minima.Infrastructure;
 

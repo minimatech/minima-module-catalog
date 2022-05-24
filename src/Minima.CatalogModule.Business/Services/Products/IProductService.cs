@@ -1,4 +1,4 @@
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Domain;
 using Minima.Infrastructure;
 using Minima.Infrastructure.Domain.Customers;
@@ -188,7 +188,7 @@ public partial interface IProductService
         string storeId = "", string vendorId = "", bool showHidden = false);
 
     /// <summary>
-    /// Update product associated 
+    /// Update product associated
     /// </summary>
     /// <param name="product">Product</param>
     Task UpdateAssociatedProduct(Product product);
@@ -262,7 +262,7 @@ public partial interface IProductService
     /// </summary>
     /// <param name="crossSellProduct">Cross-sell</param>
     Task DeleteCrossSellProduct(CrossSellProduct crossSellProduct);
-    
+
 
     #endregion
 
@@ -380,7 +380,7 @@ public partial interface IProductService
 
     #region Product warehouse inventory
 
-       
+
     /// <summary>
     /// Insert a ProductWarehouseInventory
     /// </summary>

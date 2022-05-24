@@ -2,7 +2,7 @@ using GraphQL.Types;
 
 namespace Minima.CatalogModule.Api.GraphQL.Product;
 
-public sealed class ProductQueryObjectType : ObjectGraphType<Domain.Catalog.Product>
+public sealed class ProductQueryObjectType : ObjectGraphType<Domain.Domain.Catalog.Product>
 {
     public ProductQueryObjectType()
     {
@@ -12,14 +12,14 @@ public sealed class ProductQueryObjectType : ObjectGraphType<Domain.Catalog.Prod
         Field(layer => layer.Name).Description("Deprecated. The rule that activates the layer.");
         Field(layer => layer.FullDescription).Description("Deprecated. The rule that activates the layer.");
 
-            
+
         // Field<ListGraphType<StringGraphType>, IEnumerable<Condition>>()
         //     .Name("layerrule")
         //     .Description("The rule that activates the layer.")
         //     .Resolve(ctx => ctx.Source.LayerRule.Conditions);
-            
+
         Field(layer => layer.ShortDescription).Description("The description of the layer.");
-            
+
         // Field<ListGraphType<LayerWidgetQueryObjectType>, IEnumerable<ContentItem>>()
         //     .Name("widgets")
         //     .Description("The widgets for this layer.")

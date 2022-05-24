@@ -5,11 +5,11 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Copyright>Copyright © UNIT-SOFT Sp. z o.o.</Copyright>
-		<Company>UNIT-SOFT Sp. z o.o.</Company>
-		<Authors>UNIT-SOFT Sp. z o.o.</Authors>
-		<Product>grandnode</Product>
-		<PackageProjectUrl>https://grandnode.com/</PackageProjectUrl>
+		<Copyright>Copyright © Minima Technologies</Copyright>
+		<Company>Minima Technologies</Company>
+		<Authors>Minima Technologies</Authors>
+		<Product>minima</Product>
+		<PackageProjectUrl>https://minima.work/</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/minimatech/minima-platform</RepositoryUrl>
 		<RepositoryType>Git</RepositoryType>
 	</PropertyGroup>

@@ -1,4 +1,4 @@
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Services.Interfaces.Common.Localization;
 
 namespace Minima.CatalogCore.Business.Services.Products.Impl;
@@ -51,7 +51,7 @@ public partial class CopyProductService : ICopyProductService
         //product download & sample download
         string downloadId = product.DownloadId;
         string sampleDownloadId = product.SampleDownloadId;
-        
+
 
         // product
         var productCopy = new Product
@@ -228,7 +228,7 @@ public partial class CopyProductService : ICopyProductService
 
         //validate search engine name
         await _productService.InsertProduct(productCopy);
-        
+
 
         var languages = await _languageService.GetAllLanguages(true);
 

@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Infrastructure.Models;
 
 namespace Minima.CatalogCore.Business.Models.Catalog;
@@ -85,7 +85,7 @@ public class ProductModel : BaseEntityModel
     public double Price { get; set; }
     public double OldPrice { get; set; }
     public double CatalogPrice { get; set; }
-    
+
     public double StartPrice { get; set; }
     public double ProductCost { get; set; }
     public bool EnteredPrice { get; set; }
@@ -137,7 +137,7 @@ public class ProductModel : BaseEntityModel
     //pictures
     public ProductPictureModel AddPictureModel { get; set; }
     public IList<ProductPictureModel> ProductPictureModels { get; set; }
-    
+
 
     //public IList<ProductWarehouseInventoryModel> ProductWarehouseInventoryModels { get; set; }
 
@@ -154,7 +154,7 @@ public class ProductModel : BaseEntityModel
             AvailableVendors = new List<SelectListItem>();
             AvailableProductTypes = new List<SelectListItem>();
         }
-        
+
         public string SearchProductName { get; set; }
         public string SearchCategoryId { get; set; }
         public string SearchBrandId { get; set; }
@@ -207,8 +207,8 @@ public class ProductModel : BaseEntityModel
         public string TitleAttribute { get; set; }
         public string Style { get; set; }
         public string ExtraField { get; set; }
-        
-        
+
+
     }
 
     public class ProductCategoryModel : BaseEntityModel
@@ -377,7 +377,7 @@ public class ProductModel : BaseEntityModel
         public string Amount { get; set; }
         public string OrderId { get; set; }
     }
-    
+
 
     public class ProductAttributeMappingModel : BaseEntityModel
     {
@@ -440,17 +440,17 @@ public class ProductModel : BaseEntityModel
         public string ProductAttributeMappingId { get; set; }
         public string ProductId { get; set; }
 
-        
+
         public AttributeValueType AttributeValueTypeId { get; set; }
         public string AttributeValueTypeName { get; set; }
         public string AssociatedProductId { get; set; }
         public string AssociatedProductName { get; set; }
         public string Name { get; set; }
-        
+
         public string ColorSquaresRgb { get; set; }
 
         public bool DisplayColorSquaresRgb { get; set; }
-        
+
         public string ImageSquaresPictureId { get; set; }
 
         public bool DisplayImageSquaresPicture { get; set; }
@@ -485,7 +485,7 @@ public class ProductModel : BaseEntityModel
     public class ActivityLogModel : BaseEntityModel
     {
         public string ActivityLogTypeName { get; set; }
-        
+
         public string Comment { get; set; }
         public DateTime CreatedOn { get; set; }
         public string CustomerId { get; set; }

@@ -1,4 +1,4 @@
-using Minima.CatalogModule.Domain.Catalog;
+using Minima.CatalogModule.Domain.Domain.Catalog;
 using Minima.Domain;
 using Minima.Infrastructure;
 
@@ -56,7 +56,7 @@ public partial interface ICategoryService
     Task<IList<Category>> GetAllCategoriesSearchBox();
 
     /// <summary>
-    /// Get category breadcrumb 
+    /// Get category breadcrumb
     /// </summary>
     /// <param name="category">Category</param>
     /// <param name="showHidden">A value that indicates if it should shows hidden records</param>
