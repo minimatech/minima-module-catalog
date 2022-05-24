@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <id>Minima.CatalogModule</id>
+    <id>Minima.Catalog</id>
     <version>1.0.0</version>
     <version-tag />
     <platformVersion>1.0.0</platformVersion>
-    <title>Commerce Catalog module</title>
-    <description>Common e-commerce domain functionality</description>
+    <title>Catalog module</title>
+    <description>Catalog, categories, products, variations, properties management</description>
     <authors>
         <author>Emre Karahan</author>
     </authors>
