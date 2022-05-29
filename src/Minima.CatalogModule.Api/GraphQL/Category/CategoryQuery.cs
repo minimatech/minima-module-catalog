@@ -15,15 +15,15 @@ public class CategoryQuery : ISchemaBuilder, IGraphQLQueryMarker
 
     public Task<string> GetIdentifierAsync() => Task.FromResult(string.Empty);
 
-    public Task BuildAsync(ISchema schema)
+    public async Task BuildAsync(ISchema schema)
     {
         var queryFieldMarkers = _serviceProvider.GetServices<IQueryFieldMarker>();
         foreach (var queryFieldMarker in queryFieldMarkers)
         {
-            queryFieldMarker.BuildQueryFields();
+            await queryFieldMarker.BuildQueryFields();
         }
 
-        return Task.CompletedTask;
+        //return Task.CompletedTask;
     }
 
 

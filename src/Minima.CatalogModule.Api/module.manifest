@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <id>Minima.Catalog</id>
-  <version>1.0.2</version>
+  <version>1.0.0</version>
   <version-tag />
   <platformVersion>1.0.0</platformVersion>
   <title>Catalog module</title>
@@ -12,11 +12,11 @@
   <owners>
     <owner>Minima</owner>
   </owners>
-  <projectUrl>https://virtocommerce.com/apps/extensions/virto-core-module</projectUrl>
-  <iconUrl>Modules/$(VirtoCommerce.Core)/Content/logo.png</iconUrl>
+  <projectUrl>https://minima.work/apps/extensions/minima-catalog-module</projectUrl>
+  <iconUrl>Modules/$(Minima.Catalog)/Content/logo.png</iconUrl>
   <requireLicenseAcceptance>false</requireLicenseAcceptance>
   <releaseNotes />
-  <copyright>Copyright © 2011-2021 Virto Commerce. All rights reserved</copyright>
+  <copyright>Copyright © 2011-2021 Minima Technologies. All rights reserved</copyright>
   <tags>security core</tags>
   <assemblyFile>Minima.CatalogModule.Api.dll</assemblyFile>
   <moduleType>Minima.CatalogModule.Api.Module, Minima.CatalogModule.Api</moduleType>
