@@ -1,7 +1,7 @@
 using Minima.Infrastructure.Domain;
 using Minima.Infrastructure.Domain.Localization;
 
-namespace Minima.CatalogModule.Domain.Domain.Catalog;
+namespace Minima.CatalogModule.Infrastructure.Domain.Catalog;
 
 /// <summary>
 /// Represents a product attribute

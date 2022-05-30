@@ -2,13 +2,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Minima.CatalogCore.Business.Services.Categories;
-using Minima.CatalogCore.Business.Services.Categories.Impl;
-using Minima.CatalogCore.Business.Services.Products;
-using Minima.CatalogCore.Business.Services.Products.Impl;
-using Minima.CatalogModule.Api.GraphQL.Category;
-using Minima.CatalogModule.Api.GraphQL.Product;
-using Minima.GraphQL.Abstractions;
 using Minima.Infrastructure;
 
 namespace Minima.CatalogModule.Api.Startup;

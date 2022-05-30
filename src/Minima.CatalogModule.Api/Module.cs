@@ -4,11 +4,10 @@ using Minima.CatalogCore.Business.Services.Categories;
 using Minima.CatalogCore.Business.Services.Categories.Impl;
 using Minima.CatalogCore.Business.Services.Products;
 using Minima.CatalogCore.Business.Services.Products.Impl;
-using Minima.CatalogModule.Api.GraphQL.Category;
 using Minima.CatalogModule.Api.GraphQL.Product;
-using Minima.CatalogModule.Domain.Domain.Catalog;
-using Minima.GraphQL.Abstractions;
+using Minima.CatalogModule.Infrastructure.Domain.Catalog;
 using Minima.Infrastructure.Modularity;
+using Minima.Platform.GraphQL.Abstractions;
 
 
 namespace Minima.CatalogModule.Api;

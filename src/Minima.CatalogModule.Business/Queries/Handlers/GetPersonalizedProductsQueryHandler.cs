@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Minima.CatalogCore.Business.Queries.Catalog;
 using Minima.CatalogCore.Business.Services.Products;
-using Minima.CatalogModule.Domain.Domain.Catalog;
+using Minima.CatalogModule.Infrastructure.Domain.Catalog;
 using Minima.Infrastructure.Caching;
 using Minima.Infrastructure.Caching.Constants;
 using Minima.Infrastructure.Domain.Customers;

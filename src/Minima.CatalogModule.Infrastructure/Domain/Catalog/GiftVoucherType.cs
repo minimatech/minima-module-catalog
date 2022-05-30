@@ -1,4 +1,4 @@
-namespace Minima.CatalogModule.Domain.Domain.Catalog;
+namespace Minima.CatalogModule.Infrastructure.Domain.Catalog;
 
 /// <summary>
 /// Represents a gift voucher type

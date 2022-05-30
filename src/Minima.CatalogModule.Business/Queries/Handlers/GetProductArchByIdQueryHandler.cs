@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Minima.CatalogCore.Business.Queries.Catalog;
-using Minima.CatalogModule.Domain.Domain.Catalog;
+using Minima.CatalogModule.Infrastructure.Domain.Catalog;
 using Minima.Platform.Data;
 
 namespace Minima.CatalogCore.Business.Queries.Handlers

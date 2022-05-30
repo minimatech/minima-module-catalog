@@ -2,7 +2,7 @@ using GraphQL.Types;
 
 namespace Minima.CatalogModule.Api.GraphQL.Product;
 
-public sealed class ProductQueryObjectType : ObjectGraphType<Domain.Domain.Catalog.Product>
+public sealed class ProductQueryObjectType : ObjectGraphType<Infrastructure.Domain.Catalog.Product>
 {
     public ProductQueryObjectType()
     {

@@ -2,7 +2,7 @@ using GraphQL.Types;
 
 namespace Minima.CatalogModule.Api.GraphQL.Product;
 
-public class ProductInputType : InputObjectGraphType<Domain.Domain.Catalog.Product>
+public class ProductInputType : InputObjectGraphType<Infrastructure.Domain.Catalog.Product>
 {
     public ProductInputType()
     {

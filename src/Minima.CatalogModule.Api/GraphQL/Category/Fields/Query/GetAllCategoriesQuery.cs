@@ -3,9 +3,9 @@ using GraphQL.Types;
 using Microsoft.Extensions.DependencyInjection;
 using Minima.CatalogCore.Business.Services.Categories;
 using Minima.CatalogModule.Api.GraphQL.Category.Types;
-using Minima.GraphQL.Abstractions;
-using Minima.GraphQL.Abstractions.Resolvers;
 using Minima.Infrastructure;
+using Minima.Platform.GraphQL.Abstractions;
+using Minima.Platform.GraphQL.Abstractions.Resolvers;
 
 namespace Minima.CatalogModule.Api.GraphQL.Category.Fields.Query;
 
@@ -18,14 +18,13 @@ public class GetAllCategoriesQuery : IQueryFieldMarker
         _schemaFactory = schemaFactory;
 
     }
-    public async Task BuildQueryFields()
+    public async Task BuildQueryFields(ISchema schema)
     {
-        var schema = await _schemaFactory.GetSchemaAsync();
         var getAllCategoriesFieldType = new FieldType
         {
             Name = "getAllCategories",
             Type = typeof(ListGraphType<CategoryType>),
-            Resolver = new LockedAsyncFieldResolver<IPagedList<Domain.Domain.Catalog.Category>>(ResolveAsync),
+            Resolver = new LockedAsyncFieldResolver<IPagedList<Infrastructure.Domain.Catalog.Category>>(ResolveAsync),
             Arguments = new QueryArguments(
                 new QueryArgument<IntGraphType> {Name = "pageIndex", Description = "Page Index", DefaultValue = 0},
                 new QueryArgument<IntGraphType>
@@ -41,7 +40,7 @@ public class GetAllCategoriesQuery : IQueryFieldMarker
         schema.Query.AddField(getAllCategoriesFieldType);
     }
 
-    private async Task<IPagedList<Domain.Domain.Catalog.Category>> ResolveAsync(
+    private async Task<IPagedList<Infrastructure.Domain.Catalog.Category>> ResolveAsync(
         IResolveFieldContext resolveContext)
     {
         var categoryService = resolveContext?.RequestServices?.GetService<ICategoryService>();

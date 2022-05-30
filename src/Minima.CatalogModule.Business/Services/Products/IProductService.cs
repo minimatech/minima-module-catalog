@@ -1,4 +1,4 @@
-using Minima.CatalogModule.Domain.Domain.Catalog;
+using Minima.CatalogModule.Infrastructure.Domain.Catalog;
 using Minima.Domain;
 using Minima.Infrastructure;
 using Minima.Infrastructure.Domain.Customers;

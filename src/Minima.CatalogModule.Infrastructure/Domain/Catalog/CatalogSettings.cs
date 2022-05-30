@@ -1,6 +1,6 @@
 ﻿using Minima.Infrastructure.Configuration;
 
-namespace Minima.CatalogModule.Domain.Domain.Catalog;
+namespace Minima.CatalogModule.Infrastructure.Domain.Catalog;
 
 public class CatalogSettings : ISettings
 {

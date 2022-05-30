@@ -4,7 +4,7 @@ using Minima.Infrastructure.Domain.Customers;
 using Minima.Infrastructure.Events;
 using Minima.Platform.Data;
 using System.Text.Json;
-using Minima.CatalogModule.Domain.Domain.Catalog;
+using Minima.CatalogModule.Infrastructure.Domain.Catalog;
 
 namespace Minima.CatalogCore.Business.Events.Handlers;
 

@@ -1,6 +1,6 @@
 ﻿using Minima.Infrastructure.Domain;
 
-namespace Minima.CatalogModule.Domain.Domain.Catalog;
+namespace Minima.CatalogModule.Infrastructure.Domain.Catalog;
 
 public partial class RecentlyViewedProduct: BaseEntity
 {

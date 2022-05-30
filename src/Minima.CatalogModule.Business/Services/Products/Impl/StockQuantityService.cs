@@ -1,4 +1,4 @@
-﻿using Minima.CatalogModule.Domain.Domain.Catalog;
+﻿using Minima.CatalogModule.Infrastructure.Domain.Catalog;
 using Minima.Infrastructure.Common;
 using Minima.Services.Interfaces.Common.Localization;
 

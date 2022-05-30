@@ -1,7 +1,7 @@
 ﻿using Minima.Infrastructure.Common;
 using Minima.Infrastructure.Domain;
 
-namespace Minima.CatalogModule.Domain.Domain.Catalog;
+namespace Minima.CatalogModule.Infrastructure.Domain.Catalog;
 
 public class InventoryJournal : BaseEntity
 {

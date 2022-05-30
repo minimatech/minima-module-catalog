@@ -3,8 +3,8 @@ using GraphQL.Types;
 using Microsoft.Extensions.DependencyInjection;
 using Minima.CatalogCore.Business.Services.Categories;
 using Minima.CatalogModule.Api.GraphQL.Category.Types;
-using Minima.GraphQL.Abstractions;
-using Minima.GraphQL.Abstractions.Resolvers;
+using Minima.Platform.GraphQL.Abstractions;
+using Minima.Platform.GraphQL.Abstractions.Resolvers;
 
 namespace Minima.CatalogModule.Api.GraphQL.Category;
 
@@ -23,16 +23,16 @@ public class CategoryMutation : ISchemaBuilder, IGraphQLMutationMarker
             ),
             Description = "Site Category Mutations",
             Type = typeof(CategoryType),
-            Resolver = new LockedAsyncFieldResolver<Domain.Domain.Catalog.Category>(ResolveAsync)
+            Resolver = new LockedAsyncFieldResolver<Infrastructure.Domain.Catalog.Category>(ResolveAsync)
         };
         schema.Mutation?.AddField(field);
         return Task.CompletedTask;
     }
 
-    private async Task<Domain.Domain.Catalog.Category> ResolveAsync(IResolveFieldContext resolveContext)
+    private async Task<Infrastructure.Domain.Catalog.Category> ResolveAsync(IResolveFieldContext resolveContext)
     {
         var categoryService = resolveContext?.RequestServices?.GetService<ICategoryService>();
-        var category = resolveContext?.GetArgument<Domain.Domain.Catalog.Category>("category");
+        var category = resolveContext?.GetArgument<Infrastructure.Domain.Catalog.Category>("category");
         await categoryService!.InsertCategory(category);
         return category;
     }

@@ -4,9 +4,9 @@
     </PropertyGroup>
     <Import Project="..\Build\Minima.Common.props" />
     <ItemGroup>
-      <PackageReference Include="Minima.Platform.Data" Version="1.0.1" />
-      <PackageReference Include="Minima.Platform.Infrastructure" Version="1.0.1" />
-      <PackageReference Include="Minima.Platform.Services" Version="1.0.1" />
+      <PackageReference Include="Minima.Platform.Data" Version="1.0.0" />
+      <PackageReference Include="Minima.Platform.Infrastructure" Version="1.0.0" />
+      <PackageReference Include="Minima.Platform.Services" Version="1.0.0" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Minima.CatalogModule.Infrastructure\Minima.CatalogModule.Infrastructure.csproj" />

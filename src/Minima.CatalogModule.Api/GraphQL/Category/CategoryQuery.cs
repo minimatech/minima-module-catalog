@@ -1,6 +1,6 @@
 using GraphQL.Types;
 using Microsoft.Extensions.DependencyInjection;
-using Minima.GraphQL.Abstractions;
+using Minima.Platform.GraphQL.Abstractions;
 
 namespace Minima.CatalogModule.Api.GraphQL.Category;
 
@@ -20,7 +20,7 @@ public class CategoryQuery : ISchemaBuilder, IGraphQLQueryMarker
         var queryFieldMarkers = _serviceProvider.GetServices<IQueryFieldMarker>();
         foreach (var queryFieldMarker in queryFieldMarkers)
         {
-            await queryFieldMarker.BuildQueryFields();
+            await queryFieldMarker.BuildQueryFields(schema);
         }
 
         //return Task.CompletedTask;

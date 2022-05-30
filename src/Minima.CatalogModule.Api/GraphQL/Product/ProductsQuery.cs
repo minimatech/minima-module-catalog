@@ -2,9 +2,9 @@ using GraphQL;
 using GraphQL.Types;
 using Microsoft.Extensions.DependencyInjection;
 using Minima.CatalogCore.Business.Services.Products;
-using Minima.GraphQL.Abstractions;
-using Minima.GraphQL.Abstractions.Resolvers;
 using Minima.Infrastructure;
+using Minima.Platform.GraphQL.Abstractions;
+using Minima.Platform.GraphQL.Abstractions.Resolvers;
 
 namespace Minima.CatalogModule.Api.GraphQL.Product;
 
@@ -20,7 +20,7 @@ public class ProductsQuery : ISchemaBuilder
                 Name = "Product",
                 Description = "Site layers define the rules and zone placement for widgets.",
                 Type = typeof(ListGraphType<ProductQueryObjectType>),
-                Resolver =  new LockedAsyncFieldResolver<(IPagedList<Domain.Domain.Catalog.Product> products, IList<string>)>(ResolveAsync)
+                Resolver =  new LockedAsyncFieldResolver<(IPagedList<Infrastructure.Domain.Catalog.Product> products, IList<string>)>(ResolveAsync)
             };
             schema.Query.AddField(field);
 
@@ -36,7 +36,7 @@ public class ProductsQuery : ISchemaBuilder
         return Task.CompletedTask;
     }
 
-    private  async Task<(IPagedList<Domain.Domain.Catalog.Product> products, IList<string>)> ResolveAsync(IResolveFieldContext resolveContext)
+    private  async Task<(IPagedList<Infrastructure.Domain.Catalog.Product> products, IList<string>)> ResolveAsync(IResolveFieldContext resolveContext)
     {
         try
         {

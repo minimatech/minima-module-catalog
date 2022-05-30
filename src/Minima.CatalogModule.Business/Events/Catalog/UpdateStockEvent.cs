@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Minima.CatalogModule.Domain.Domain.Catalog;
+using Minima.CatalogModule.Infrastructure.Domain.Catalog;
 
 namespace Minima.CatalogCore.Business.Events.Catalog;
 

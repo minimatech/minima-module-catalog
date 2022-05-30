@@ -2,7 +2,7 @@ using Minima.Infrastructure.Domain;
 using Minima.Infrastructure.Domain.Localization;
 using Minima.Infrastructure.Domain.Permissions;
 
-namespace Minima.CatalogModule.Domain.Domain.Catalog;
+namespace Minima.CatalogModule.Infrastructure.Domain.Catalog;
 
 /// <summary>
 /// Represents a brand

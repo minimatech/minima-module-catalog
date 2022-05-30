@@ -1,12 +1,10 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using GraphQL;
 using GraphQL.Types;
 using Microsoft.Extensions.DependencyInjection;
 using Minima.CatalogCore.Business.Services.Categories;
 using Minima.CatalogModule.Api.GraphQL.Category.Types;
-using Minima.GraphQL.Abstractions;
-using Minima.GraphQL.Abstractions.Resolvers;
+using Minima.Platform.GraphQL.Abstractions;
+using Minima.Platform.GraphQL.Abstractions.Resolvers;
 
 namespace Minima.CatalogModule.Api.GraphQL.Category.Fields.Query;
 
@@ -19,14 +17,13 @@ public class GetAllCategoriesByParentCategoryId : IQueryFieldMarker
         _schemaFactory = schemaFactory;
     }
 
-    public async Task BuildQueryFields()
+    public async Task BuildQueryFields(ISchema schema)
     {
-        var schema = await _schemaFactory.GetSchemaAsync();
         var getAllCategoriesByParentCategoryId = new FieldType
         {
             Name = "getAllCategoriesByParentCategoryId",
             Type = typeof(ListGraphType<CategoryType>),
-            Resolver = new LockedAsyncFieldResolver<IList<Domain.Domain.Catalog.Category>>(
+            Resolver = new LockedAsyncFieldResolver<IList<Infrastructure.Domain.Catalog.Category>>(
                 GetAllCategoriesByParentCategoryIdResolveAsync),
             Arguments = new QueryArguments(
                 new QueryArgument<StringGraphType>
@@ -40,7 +37,7 @@ public class GetAllCategoriesByParentCategoryId : IQueryFieldMarker
         schema.Query.AddField(getAllCategoriesByParentCategoryId);
     }
 
-    private async Task<IList<Domain.Domain.Catalog.Category>> GetAllCategoriesByParentCategoryIdResolveAsync(IResolveFieldContext resolveContext)
+    private async Task<IList<Infrastructure.Domain.Catalog.Category>> GetAllCategoriesByParentCategoryIdResolveAsync(IResolveFieldContext resolveContext)
     {
         var categoryService = resolveContext?.RequestServices?.GetService<ICategoryService>();
 
