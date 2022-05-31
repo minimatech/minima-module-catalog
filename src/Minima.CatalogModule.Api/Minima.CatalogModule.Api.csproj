@@ -28,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Minima.Platform.GraphQL" Version="1.0.0" />
+      <PackageReference Include="Minima.Platform.GraphQL" Version="0.0.1" />
     </ItemGroup>
 
 
