@@ -6,7 +6,7 @@ public sealed class ProductType : ObjectGraphType<Infrastructure.Domain.Catalog.
 {
     public ProductType()
     {
-        Name = "ProductT";
+        Name = "Product";
 
         Field(h => h.Name).Description("The id of the human.");
         Field(h => h.ShortDescription, nullable: true).Description("The name of the human.");

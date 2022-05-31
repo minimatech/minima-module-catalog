@@ -10,13 +10,6 @@ namespace Minima.CatalogModule.Api.GraphQL.Category.Fields.Query;
 
 public class GetAllCategoriesByParentCategoryId : IQueryFieldMarker
 {
-    private readonly ISchemaFactory _schemaFactory;
-
-    public GetAllCategoriesByParentCategoryId(ISchemaFactory schemaFactory)
-    {
-        _schemaFactory = schemaFactory;
-    }
-
     public async Task BuildQueryFields(ISchema schema)
     {
         var getAllCategoriesByParentCategoryId = new FieldType
