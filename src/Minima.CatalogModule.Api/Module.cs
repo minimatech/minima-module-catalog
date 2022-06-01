@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Minima.CatalogCore.Business.Services.Brands;
+using Minima.CatalogCore.Business.Services.Brands.Impl;
 using Minima.CatalogCore.Business.Services.Categories;
 using Minima.CatalogCore.Business.Services.Categories.Impl;
 using Minima.CatalogCore.Business.Services.Products;
@@ -52,7 +54,7 @@ public class Module : IModule
     {
         // serviceCollection.AddScoped<IOutOfStockSubscriptionService, OutOfStockSubscriptionService>();
         serviceCollection.AddScoped<ICategoryService, CategoryService>();
-        //serviceCollection.AddScoped<IBrandService, BrandService>();
+        serviceCollection.AddScoped<IBrandService, BrandService>();
         //serviceCollection.AddScoped<IRecentlyViewedProductsService, RecentlyViewedProductsService>();
         //serviceCollection.AddScoped<ICollectionService, CollectionService>();
         //serviceCollection.AddScoped<IPriceFormatter, PriceFormatter>();

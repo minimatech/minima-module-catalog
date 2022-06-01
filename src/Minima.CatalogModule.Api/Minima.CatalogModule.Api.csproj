@@ -24,6 +24,7 @@
 
     <ItemGroup>
         <Folder Include="Commands" />
+        <Folder Include="GraphQL\Brand\Fields\Mutation" />
         <Folder Include="GraphQL\Category\Fields\Mutation" />
     </ItemGroup>
 
